@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta Sorteo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Bootstrap JS and Popper.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <!-- Sección de anuncios izquierda -->
+            <div id="leftAd" class="col-md-2 d-none d-md-block ad-section">
+                <!-- Aquí irán los anuncios de la izquierda -->
+            </div>
+    
+            <!-- Sección central con la tabla (70% del ancho) -->
+            <div class="col-12 col-md-8">
+                <div class="container mt-5">
+                    <h2 class="text-center title">¡Fíjate si tu sorteo fue depositado aquí!</h2>
+                    <div class="d-flex flex-column flex-md-row align-items-center mb-3 justify-content-between"> <!-- Contenedor flex para el buscador y redes sociales -->
+                        <input id="searchInput" type="text" class="form-control me-2 mb-2 mb-md-0" placeholder="Buscar..." style="width: 250px;"> <!-- Input más pequeño -->
+                        <div class="text-left"> <!-- Cambié a text-left para que esté alineado a la izquierda -->
+                            <p class="mb-0">¡No olvides seguirme en redes sociales!</p>
+                            <div class="social-icons d-flex"> <!-- Alineación flex para los íconos -->
+                                <a href="https://www.youtube.com" target="_blank" class="social-icon youtube">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a href="https://www.twitch.tv" target="_blank" class="social-icon twitch">
+                                    <i class="fab fa-twitch"></i>
+                                </a>
+                                <a href="https://discord.com" target="_blank" class="social-icon discord">
+                                    <i class="fab fa-discord"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Tabla de Bootstrap -->
+                    <table class="table table-striped" id="itemsTable">
+                        <thead>
+                            <tr>
+                                <th scope="col">Nick de Albion</th>
+                                <th scope="col">Items/Montura</th>
+                                <th scope="col">Estado</th>
+                                <th scope="col">Fecha y Hora</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Las filas se cargarán dinámicamente -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+    
+            <!-- Sección de anuncios derecha -->
+            <div id="rightAd" class="col-md-2 d-none d-md-block ad-section">
+                <!-- Aquí irán los anuncios de la derecha -->
+            </div>
+        </div>
+    </div>
+    
+    
+    <script src="index.js"></script>
+</body>
+</html>

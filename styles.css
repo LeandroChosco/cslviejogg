@@ -1,0 +1,88 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    height: 100vh; /* Asegúrate de que el body ocupe toda la altura de la ventana */
+    margin: 0; /* Eliminar márgenes por defecto */
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460); /* Ajusta los colores como desees */
+    color: white; /* Texto blanco para contraste */
+}
+
+/* Estilo para las secciones de anuncios */
+.ad-section {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    height: 100vh; /* Para que ocupen toda la altura de la pantalla */
+    display: none; /* Mantener ocultos hasta que estén listos */
+    visibility: hidden;
+}
+
+/* Mostrar los anuncios cuando sea necesario */
+#ad-section.show {
+    display: none;
+}
+
+/* Estilo para la tabla que ocupa el 70% del ancho */
+.table-container {
+    width: 100%;
+}
+
+.social-icons {
+    display: flex; /* Asegurar que los íconos estén en línea */
+    gap: 10px; /* Espacio entre los íconos */
+    justify-content: flex-end; /* Alinear íconos a la derecha */
+    margin-right: 15%;
+
+}
+.social-icon {
+    font-size: 2rem; /* Tamaño del ícono */
+    transition: transform 0.3s; /* Transición suave para el tamaño */
+    margin-right: 10%;
+    color:white;
+
+}
+
+/* Colores específicos para cada ícono */
+.social-icon.youtube {
+    color: #FF0000; /* Rojo para YouTube */
+}
+
+.social-icon.twitch {
+    color: #9146FF; /* Morado para Twitch */
+}
+
+.social-icon.discord {
+    color: #7289DA; /* Azul para Discord */
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Aumentar el tamaño al pasar el mouse */
+}
+
+body div{
+    color:#fff
+}
+table th{
+    background-color: rgba(173, 216, 230, 0.6);
+    color: #fff;
+}
+table td{
+    color: #fff;
+}
+table tr{
+    color: #fff;
+}
+
+
+@media (max-width: 768px) {
+    .title {
+        text-align: center; /* Centrar el texto */
+        margin-bottom: 20px; /* Espacio debajo del título */
+    }
+    .social-icons {
+        display: none;
+    }
+    
+
+    .mb-0{
+        display:none;
+    }
+}
