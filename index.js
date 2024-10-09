@@ -15,8 +15,11 @@ function cargarDatos(url) {
         const tableBody = document.getElementById("itemsTable").getElementsByTagName("tbody")[0];
         tableBody.innerHTML = ""; // Limpiar filas existentes
 
-        // Recorrer los datos y agregarlos a la tabla
-        data.forEach(item => {
+        // Ordenar los datos por fecha en orden descendente (más reciente primero)
+        const sortedData = data.sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
+
+        // Recorrer los datos ordenados y agregarlos a la tabla
+        sortedData.forEach(item => {
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td>${item.userAlbion}</td>
@@ -35,6 +38,7 @@ function cargarDatos(url) {
     })
     .catch(error => console.error('Error al cargar los datos:', error));
 }
+
 
 // Función para mostrar solo las filas limitadas (50)
 function mostrarFilasLimitadas() {
