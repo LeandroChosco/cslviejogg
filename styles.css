@@ -64,6 +64,7 @@ table th{
     background-color: rgba(173, 216, 230, 0.6);
     color: #fff;
 }
+
 table td{
     color: #fff;
 }
@@ -81,7 +82,9 @@ table tr{
         display: none;
     }
     
-
+    .table thead tr th{
+        vertical-align: middle !important;
+    }
     .mb-0{
         display:none;
     }
